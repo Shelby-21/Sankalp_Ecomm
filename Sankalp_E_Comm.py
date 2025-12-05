@@ -25,7 +25,7 @@ def load_data():
     try:
         # Tring to read the specific filename provided in your prompt context
         # In a real deployment, you might rename this file to 'daily_aggregated.csv'
-        df = pd.read_excel("E_Comm_File", sheet_name='daily_aggregated')
+        df = pd.read_excel("E_Comm_File.xlsx", sheet_name='daily_aggregated')
     except FileNotFoundError:
         st.warning("Default file not found. Please upload 'daily_aggregated.csv' below.")
         uploaded_file = st.file_uploader("Upload Daily Aggregated excel", type=['csv'])
